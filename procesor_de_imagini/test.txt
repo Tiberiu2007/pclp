@@ -1,0 +1,5 @@
+CREATE img1 900 900
+LOAD img2 ./alpaca.bmp
+CLEAR img1 255 255 255
+PASTE img2 img1 100 50
+SAVE img2 ./output.bmp
