@@ -1,5 +1,20 @@
 CREATE img1 900 900
 LOAD img2 ./alpaca.bmp
 CLEAR img1 255 255 255
-PASTE img2 img1 100 50
+PASTE img2 img1 400 400
+RECTANGLE img2 100 200 100 200 255 0 0
+CROP img2 100 100 100 100
+GRAYSCALE img2
+SQUARE img2
 SAVE img2 ./output.bmp
+
+# Comentariu
+LOAD img3 ./alpaca.bmp
+FILTER laplacian img3
+SAVE img3 ./filtered.bmp
+
+# Codare si decodare
+LOAD to_encode ./alpaca.bmp
+ENCODE to_encode ./encoded.bmp
+DECODE decoded ./encoded.bmp
+SAVE decoded ./decoded.bmp
